@@ -12,7 +12,7 @@ const PORT = 4000
 // app.use(cors())
 
 const socketIO = require('socket.io')(http)
-socketIO.origins(['https://chat-app-2ifl.onrender.com:443']);
+// socketIO.origins(['https://chat-app-2ifl.onrender.com:443']);
 
 let users = []
 
