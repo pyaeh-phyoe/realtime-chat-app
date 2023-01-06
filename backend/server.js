@@ -3,13 +3,17 @@ const app = express()
 const cors = require("cors")
 const http = require('http').Server(app);
 const PORT = 4000
-const socketIO = require('socket.io')(http, {
-    cors: {
-        origin: "http://localhost:3000"
-    }
-});
+// const socketIO = require('socket.io')(http, {
+//     cors: {
+//         origin: "http://localhost:3000"
+//     }
+// });
 
-app.use(cors())
+// app.use(cors())
+
+const socketIO = require('socket.io')(http)
+socketIO.origins(['https://chat-app-2ifl.onrender.com:443']);
+
 let users = []
 
 socketIO.on('connection', (socket) => {
