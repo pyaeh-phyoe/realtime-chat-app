@@ -4,7 +4,7 @@ import Chat from "./pages/chat";
 import socketIO from "socket.io-client"
 
 
-const socket = socketIO.connect("http://localhost:4000")
+const socket = socketIO.connect("https://chat-app-2ifl.onrender.com")
 function App() {
   return (
     <BrowserRouter>
